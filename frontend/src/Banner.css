@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pharmacy-banner {
+  width: 100%;
+  max-height:80vh;
+  background-image:cover;
+  margin-bottom: 1rem;
+  display: block;
+  position: static;
+  margin-top: -297vh;
+}
+
+.banner-wrapper {
+  width: 100%;
+  height: 85vh;
+  position: relative;
+  margin-top: 138rem;
+  
+}
+
+#shop-button {
+  position: absolute;
+  margin-top:-20vh;
+  margin-left:6vw;
+  padding: 10px 20px;
+  background-color: white; 
+  color: #4a9838;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease;
+}
+
+
+#shop-button:hover {
+  background-color: #f9f9f9c6;
+}

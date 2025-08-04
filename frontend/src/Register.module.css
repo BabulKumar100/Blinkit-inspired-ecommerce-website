@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  width: 450px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #32cd32; 
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  margin-top: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  border-color: #32cd32;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+  background-color: #28a428;
+}
+
+.loginText {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.link {
+  color: #32cd32;
+  text-decoration: none;
+}

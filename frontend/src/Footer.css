@@ -1,0 +1,155 @@
+footer {
+    margin-top: 15px;
+}
+.foot-panel1 {
+    background-color: #DDDDDD;
+    color: #37475a;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 60px;
+}
+
+.foot-panel2 {
+  background-color:#37475a ;
+  color: #37475a;
+  font-size: 14px;
+  padding: 30px 10%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.foot-panel2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.foot-panel2 > ul > .section-header,
+.foot-panel2 > ul > .category-header {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 15px;
+  display: block;
+}
+
+
+.foot-panel2 .category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.foot-panel2 .category-header .section-header {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+
+.foot-panel2 .see-all {
+  color: rgba(0, 128, 0, 0.786);
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.foot-panel2 .see-all:hover {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+
+.foot-panel2 ul a:not(.section-header):not(.see-all) {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.foot-panel2 ul a:not(.section-header):not(.see-all):hover {
+  color: #007185;
+  text-decoration: underline;
+}
+
+
+.foot-panel2 .section-header {
+  cursor: default;
+  pointer-events: none;
+}
+
+
+@media (max-width: 1200px) {
+  .foot-panel2 {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .foot-panel2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .foot-panel2 {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .foot-panel2 ul {
+    margin-bottom: 20px;
+  }
+}
+
+.see-all { 
+  margin-left: 8px;
+}
+
+.footer-panel3 {
+  height: 78px;
+  background-color: #DDDDDD;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.text a {
+  color: #37475a;
+  font-size: 12px;
+}
+
+.Download a {
+  color: #37475a;
+  font-size: 14px;
+}
+
+.store-buttons {
+    display: flex;
+    align-items: center;
+}
+
+#Information {
+  color: #666666;
+  font-size: 16px;
+  width: 70%;
+  position: relative;
+  margin-left: 240px;
+  margin-bottom: 15px;
+}
+
+
+
+

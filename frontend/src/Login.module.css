@@ -1,0 +1,78 @@
+.loginContainer {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  margin: 80px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #32cd32;
+}
+
+.forgotPassword {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.submitButton {
+  margin-top: 20px;
+  background-color: #32cd32;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #28a428;
+}
+
+.RegistrationText {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.link {
+  color: #32cd32;
+  font-weight: bold;
+  margin-left: 6px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

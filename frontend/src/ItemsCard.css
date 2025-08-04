@@ -1,0 +1,183 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  background-color: #f9f9f9;
+  position: sticky;
+}
+
+
+.items-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  width: 200px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  border-left: 5px solid #60b246;
+  padding-left: 0.8rem;
+}
+
+
+.items-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+ .itemList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.items-list::-webkit-scrollbar {
+  height: 6px;
+}
+
+.items-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+
+
+.product-card {
+  min-width: 100px;
+  max-width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  display: flex;
+  margin-right: 10px;
+  justify-content: space-evenly;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+  border-radius: 6px;
+}
+
+
+.quantity {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.6rem;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.price-add-button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+
+.price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+button {
+  background-color: #60b246;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #4a9838;
+}
+
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .product-card {
+  text-align: center;
+}
+
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .product-card {
+    min-width: 120px;
+    max-width: 120px;
+  }
+}
+
+.section-wrapper {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+
+.section-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 3rem 3rem;
+  color: #333;
+}
+
+
+.section-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  justify-content: space-evenly;
+}
