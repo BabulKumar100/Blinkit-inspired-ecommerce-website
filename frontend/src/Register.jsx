@@ -29,7 +29,7 @@ const Register = (props) => {
   }
 
   try {
-    const res = await fetch('https://blinkit-backend.onrender.com/api/auth/register', {
+    const res = await fetch('https://blinkit-inspired-ecommerce-application-8.onrender.com/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

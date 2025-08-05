@@ -10,7 +10,7 @@ const Forgot = () => {
   e.preventDefault();
 
   try {
-    const res = await fetch('https://blinkit-backend.onrender.com/api/auth/forgot-password', {
+    const res = await fetch('https://blinkit-inspired-ecommerce-application-8.onrender.com/api/auth/forgot-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email:email.toLowerCase()}),

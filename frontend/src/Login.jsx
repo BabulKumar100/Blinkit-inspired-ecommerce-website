@@ -12,7 +12,7 @@ const Login = ({onLoginSuccess,setIsLoggedIn}) => {
 
 
     try {
-    const res = await fetch('https://blinkit-backend.onrender.com/api/auth/login', {
+    const res = await fetch('https://blinkit-inspired-ecommerce-application-8.onrender.com/api/auth/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({email:email.toLowerCase(),password}),
