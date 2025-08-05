@@ -38,7 +38,7 @@ const [loadingBackend, setLoadingBackend] = useState(true);
     },[]);
 
     useEffect(() => {
-  fetch("https://blinkit-backend.onrender.com/healthcheck")
+  fetch("https://blinkit-inspired-ecommerce-application-7.onrender.com/healthcheck")
     .then(() => {
       console.log("Backend awake");
       setLoadingBackend(false);
