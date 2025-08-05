@@ -24,6 +24,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
   return !!localStorage.getItem("userEmail");
 });
+const [loadingBackend, setLoadingBackend] = useState(true);
 
   const [showLoginPopup, setShowLoginPopup] = useState(true);
       
@@ -35,6 +36,18 @@ const App = () => {
       setIsLoggedIn(false);
       }
     },[]);
+
+    useEffect(() => {
+  fetch("https://blinkit-backend.onrender.com/healthcheck")
+    .then(() => {
+      console.log("Backend awake");
+      setLoadingBackend(false);
+    })
+    .catch((err) => {
+      console.error("Ping failed", err);
+      setLoadingBackend(false); 
+    });
+}, []);
 
 
     
@@ -421,88 +434,107 @@ const App = () => {
   }, []);
 
   return (
-     
-    <>
-{!isLoggedIn && showLoginPopup && (
-  <LoginRequiredPopup onClose={() => setShowLoginPopup(false)} />
-  )}
+  <>
+    {loadingBackend ? (
+      <div style={{ padding: "2rem", textAlign: "center" }}>
+        <h2>Waking up server... Please wait ⏳</h2>
+      </div>
+    ) : (
+      <>
+        {!isLoggedIn && showLoginPopup && (
+          <LoginRequiredPopup onClose={() => setShowLoginPopup(false)} />
+        )}
 
+        <Navbar
+          cartcount={cartcount}
+          itemsArray={mergedItemsArray}
+          totalPrice={totalPrice}
+          isLoggedIn={isLoggedIn}
+          userName={userName}
+          userEmail={userEmail}
+        />
 
-      <Navbar
-      cartcount={cartcount}
-      itemsArray={mergedItemsArray}
-      totalPrice={totalPrice}
-      isLoggedIn={isLoggedIn}
-      userName={userName}
-      userEmail={userEmail}
-      />
-      <Routes>
-        <Route path="/" element={
-          <Blinkit
-            cartcount={cartcount}
-            setcartcount={setcartcount}
-            itemStatus={itemStatus}
-            setItemStatus={setItemStatus}
-            itemsArray={itemsArray}
-            toggleCartStatus={toggleCartStatus}
-            totalPrice={totalPrice}
-            isLoggedIn={isLoggedIn}
-            setShowLoginPopup={setShowLoginPopup}
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Blinkit
+                cartcount={cartcount}
+                setcartcount={setcartcount}
+                itemStatus={itemStatus}
+                setItemStatus={setItemStatus}
+                itemsArray={itemsArray}
+                toggleCartStatus={toggleCartStatus}
+                totalPrice={totalPrice}
+                isLoggedIn={isLoggedIn}
+                setShowLoginPopup={setShowLoginPopup}
+              />
+            }
           />
-        } />
-        <Route path="/cart" element={
-          <Cart
-           cartcount={cartcount}
-           totalPrice={totalPrice}
-           Cartcount={cartcount}
-           setcartcount={setcartcount}
-           />} />
-        <Route
-         path="/Login"
-         element={
-         <Login 
-         setIsLoggedIn={setIsLoggedIn}
-         onLoginSuccess={() => {
-          setIsLoggedIn(true);
-          navigate("/")
-         }}
-         />
-         }
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cartcount={cartcount}
+                totalPrice={totalPrice}
+                Cartcount={cartcount}
+                setcartcount={setcartcount}
+              />
+            }
           />
-        <Route path="/shop" element={
-          <Shop
-            cartcount={cartcount}
-            setcartcount={setcartcount}
-            itemsArray={Array}
-            itemStatus={itemStatus}
-            setItemStatus={setItemStatus}
-            toggleCartStatus={toggleCartStatus}
-            totalPrice={totalPrice}
-            isLoggedIn={isLoggedIn}
-            setShowLoginPopup={setShowLoginPopup}
+          <Route
+            path="/Login"
+            element={
+              <Login
+                setIsLoggedIn={setIsLoggedIn}
+                onLoginSuccess={() => {
+                  setIsLoggedIn(true);
+                  navigate("/");
+                }}
+              />
+            }
           />
-        } />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/forgot" element={<Forgot />} />
-         <Route path="/reset-password" element={<ResetPassword />} />
-         <Route path="/all-users" element={<AllUsers />} />
-        <Route path="/search" element={
-          <SearchResults
-            itemsArray={mergedItemsArray}
-            cartcount={cartcount}
-            setcartcount={setcartcount}
-            itemStatus={itemStatus}
-            setItemStatus={setItemStatus}
-            toggleCartStatus={toggleCartStatus}
-           totalPrice={totalPrice}
-           isLoggedIn={isLoggedIn}
-           setShowLoginPopup={setShowLoginPopup}
-          /> 
-        } />
-
-      </Routes>
-    </>
-  );
+          <Route
+            path="/shop"
+            element={
+              <Shop
+                cartcount={cartcount}
+                setcartcount={setcartcount}
+                itemsArray={Array}
+                itemStatus={itemStatus}
+                setItemStatus={setItemStatus}
+                toggleCartStatus={toggleCartStatus}
+                totalPrice={totalPrice}
+                isLoggedIn={isLoggedIn}
+                setShowLoginPopup={setShowLoginPopup}
+              />
+            }
+          />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/forgot" element={<Forgot />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/all-users" element={<AllUsers />} />
+          <Route
+            path="/search"
+            element={
+              <SearchResults
+                itemsArray={mergedItemsArray}
+                cartcount={cartcount}
+                setcartcount={setcartcount}
+                itemStatus={itemStatus}
+                setItemStatus={setItemStatus}
+                toggleCartStatus={toggleCartStatus}
+                totalPrice={totalPrice}
+                isLoggedIn={isLoggedIn}
+                setShowLoginPopup={setShowLoginPopup}
+              />
+            }
+          />
+        </Routes>
+      </>
+    )}
+  </>
+);
 };
 
 export default App;

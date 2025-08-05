@@ -4,7 +4,7 @@ const AllUsers = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/auth/all-users")
+    fetch("http://blinkit-backend.onrender.com/api/auth/all-users")
       .then(res => res.json())
       .then(data => setUsers(data));
   }, []);

@@ -29,7 +29,7 @@ const Register = (props) => {
   }
 
   try {
-    const res = await fetch('http://localhost:5000/api/auth/register', {
+    const res = await fetch('http://blinkit-backend.onrender.com/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -69,8 +69,8 @@ const Register = (props) => {
           className={styles.input}
           type='text'
           placeholder='Enter Your Name'
-          id='Name'
-          name='Name'
+          id='name'
+          name='name'
           value={formData.name}
           onChange={handleChange}
           required
@@ -81,8 +81,8 @@ const Register = (props) => {
           className={styles.input}
           type='email'
           placeholder='Enter Your Email'
-          id='Email'
-          name='Email'
+          id='email'
+          name='email'
           value={formData.email}
           onChange={handleChange}
           required

@@ -7,15 +7,21 @@ dotenv.config();
 connectDB();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "https://blinkit-inspired-ecommerce-applicat-lac.vercel.app/",
+  credentials: true,
+}));
+
+
 app.use(express.json());
 
 app.use('/api/auth', require('./routes/authRoutes'));
 
 app.use('/api/profile', require('./routes/Profile'));
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Blinkit Backend");
+app.get("/healthcheck", (req, res) => {
+  res.status(200).send("Server is awake and running!");
 });
 
 
