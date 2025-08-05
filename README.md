@@ -85,7 +85,7 @@ BLINKIT/
   ├── node_modules/
   ├── routes/
   │ ├── authRoutes.js
-  │ └── Profile.js
+  │ └── Profile.js          
   ├── files/
   ├── .env
   ├── db.js
@@ -93,32 +93,37 @@ BLINKIT/
 
 # Screenshots:
 
-![HomePage Screenshot1](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/08b640ba8278e8b929160c63ce461a4602eb6d3c/HomePage-screenshot1.png)
+![HomePage Screenshot1](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/HomePage%20screenshot1.png)
 
-![HomePage Screenshot2](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/08b640ba8278e8b929160c63ce461a4602eb6d3c/HomePage%20Screenshot2.png)
+![HomePage Screenshot2](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/HomePage%20Screenshot2.png)
 
-![HomePage Screenshot3](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/HomePage%20Screenshot3.png)
+![HomePage Screenshot3](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/HomePage%20Screenshot3.png)
 
-![Shop-Page-UI1](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/shop-Page-UI1.png)
+![HomePage Screenshot4](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/HomePage%20Screenshot4.png)
 
-![Shop-Page-UI2](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Shop-Page-UI2.png)
+![HomePage Screenshot5](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/HomePage%20Screenshot5.png)
 
-![Shop-Page-UI3](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Shop-Page-UI3.png)
+![Shop-Page-UI1](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/shop-Page-UI1.png)
 
-![Shop-Page-UI4](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Shop-Page-UI4.png)
+![Shop-Page-UI2](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Shop-Page-UI2.png)
+
+![Shop-Page-UI3](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Shop-Page-UI3.png)
+
+![Shop-Page-UI4](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Shop-Page-UI4.png)
 
 ![Shop-Page-UI5](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Shop-Page-UI5.png)
 
-![Login-Page-UI](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Login-Page-UI.png)
+![Login-Page-UI](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Shop-Page-UI5.png)
 
-![Register-Page-UI](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Register-Page-UI.png)
+![Register-Page-UI](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Register-Page-UI.png)
 
-![Forgot-Password-Page-UI](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Forgot-Password-Page-UI.png)
+![Forgot-Password-Page-UI](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Forgot-Password-Page-UI.png)
 
-![Reset-Password-UI1](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Reset-Password-%20UI1.png)
+![Reset-Password-UI1](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Reset-Password-%20UI1.png)
 
-![Reset-Password-UI2](https://github.com/BabulKumar100/blinkit-inspired-ecommerce-app/blob/ddf5fbdf21fa225e6391e28018639ef4160174ea/Reset-password-UI2.png)
+![Reset-Password-UI2](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Reset-password-UI2.png)
 
+![Reset-Password-email](https://github.com/BabulKumar100/Blinkit-inspired-ecommerce-application/blob/8b1756be6376e78d8df79ca6179a79822633140a/Reset-Password-email.png)
 
 
  # How to Use:
@@ -247,6 +252,7 @@ BLINKIT/
       
 
       
+
 
 
 
