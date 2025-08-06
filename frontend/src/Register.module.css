@@ -20,7 +20,7 @@
 
 .label {
   display: block;
-  margin: 12px 0 4px;
+  margin: 16px 0 4px;
   font-weight: 500;
   color: #333;
 }
@@ -31,8 +31,9 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
-  margin-top: 8px;
+  margin: 8px 0 16px 0;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .input:focus {

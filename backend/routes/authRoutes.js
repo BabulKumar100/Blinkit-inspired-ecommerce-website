@@ -33,16 +33,26 @@ router.post('/login', async (req, res) => {
 router.post('/register', async (req, res) => {
   const { name, email, password, confirmPassword } = req.body;
 
-  if (password !== confirmPassword) {
-    return res.status(400).json({ error: "Passwords do not match" });
-  }
+  if (password.trim() !== confirmPassword.trim()) {
+  return res.status(400).json({ error: "Passwords do not match" });
+}
+
 
   try {
-    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const existingUser = await User.findOne({
+      email: { $regex: new RegExp(`^${email.trim()}$`, 'i') }
+      })
+
+    if (existingUser) {
+      return res.status(409).json({error: "Email already in use"})
+    }
+
+    const hashedPassword = await bcrypt.hash(password.trim(), 10);
 
     const newUser = new User({
-      name,
-      email: email.toLowerCase(),
+      name: name.trim(),
+      email: email.toLowerCase().trim(),
       password: hashedPassword,
     });
 
@@ -51,7 +61,17 @@ router.post('/register', async (req, res) => {
 
   } catch (err) {
     console.error("Registration error:", err);
-    res.status(500).json({ error: "Server error" });
+
+    if (err.code === 11000) {
+      return res.status(409).json({ error: "Email already registered"});
+    }
+   
+
+
+   return  res.status(500).json({
+      error: "Registration failed",
+      details: process.env.Node_ENV == 'development' ? err.message : undefined
+    })
   }
 });
 

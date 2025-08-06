@@ -23,8 +23,13 @@ const Register = (props) => {
   const handleSubmit = async (e) => {
   e.preventDefault();
 
-  if (formData.password !== formData.confirmPassword) {
-    alert('Passwords do not match!');
+ if (formData.password.trim() !== formData.confirmPassword.trim()) {
+  alert('Passwords do not match!');
+  return;
+}
+
+  if(formData.password.length <6) {
+    alert('Password must be at least 6 characters');
     return;
   }
 
@@ -35,23 +40,27 @@ const Register = (props) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: formData.name,
-        email: formData.email.toLowerCase(), 
-        password: formData.password,
-        confirmPassword: formData.confirmPassword,
+        name: formData.name.trim(),
+        email: formData.email.toLowerCase().trim(), 
+        password: formData.password.trim(),
+        confirmPassword: formData.confirmPassword.trim()
       }),
     });
 
     const data = await res.json();
 
     if (!res.ok) {
-   
-      alert(data.error || 'Registration failed.');
+      if (res.status === 409) {
+      alert(data.error || 'This email has already been use in registration');
     } else {
-      alert(data.message || 'Registration successful!');
+      alert(data.message || 'Registration failed.');
      
-      window.location.href = '/Login';
     }
+    return;
+    }
+
+    alert('Registration successful!');
+    window.location.href = '/login';
 
   } catch (error) {
     console.error('Registration error:', error);
@@ -69,7 +78,7 @@ const Register = (props) => {
           className={styles.input}
           type='text'
           placeholder='Enter Your Name'
-          id='name'
+          id='Name'
           name='name'
           value={formData.name}
           onChange={handleChange}
@@ -81,7 +90,7 @@ const Register = (props) => {
           className={styles.input}
           type='email'
           placeholder='Enter Your Email'
-          id='email'
+          id='Email'
           name='email'
           value={formData.email}
           onChange={handleChange}
