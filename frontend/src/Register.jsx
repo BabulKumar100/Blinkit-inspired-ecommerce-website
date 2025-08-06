@@ -34,7 +34,7 @@ const Register = (props) => {
   }
 
   try {
-    const res = await fetch('https://blinkit-inspired-ecommerce-application-8.onrender.com/api/auth/register', {
+    const res = await fetch('https://blinkit-inspired-ecommerce-website.onrender.com/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -47,19 +47,28 @@ const Register = (props) => {
       }),
     });
 
-    const data = await res.json();
+    let data;
+    try {
+        data = await res.json();
+    } catch (e) {
+      console.warn("Failed to parse JSON response");
+      data = {};
+    }
 
     if (!res.ok) {
       if (res.status === 409) {
-      alert(data.error || 'This email has already been use in registration');
+      alert(data.error || 'Email already in use');
+    } else  if (res.status === 400) {
+      alert(data.error || 'Passwords do not match');
     } else {
-      alert(data.message || 'Registration failed.');
-     
+      alert(data.error || 'Registration failed.')
     }
+     
+    
     return;
     }
 
-    alert('Registration successful!');
+    alert(data.message ||'Registration successful!');
     window.location.href = '/login';
 
   } catch (error) {

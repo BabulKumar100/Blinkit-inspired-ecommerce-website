@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 
-// app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/profile', require('./routes/Profile'));
 
 

@@ -23,7 +23,7 @@ const ProfilePanel = ({ setIspanelOpen }) => {
           return;
         }
 
-        const res = await fetch("https://blinkit-inspired-ecommerce-application-8.onrender.com/api/profile", {
+        const res = await fetch("https://blinkit-inspired-ecommerce-website.onrender.com/api/profile", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({email: email.toLowerCase()}),
