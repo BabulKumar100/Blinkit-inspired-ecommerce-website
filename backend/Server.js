@@ -9,17 +9,20 @@ connectDB();
 const app = express();
 
 const allowedOrigins = [
-  'http://localhost:3001',
   'http://localhost:3000',
-  'https://blinkit-inspired-ecommerce-applicat-lac.vercel.app'
+  'https://blinkit-inspired-ecommerce-website.vercel.app',
+  'https://blinkit-inspired-ecommerce-website-26wmmnlh3.vercel.app',
+  'https://blinkit-inspired-ecommerce-website-5fql6qx2n.vercel.app',
 ];
 
 
 const corsOptions = {
   origin: function (origin, callback) {
+    console.log('origin received:', origin);
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      console.log('CORS error :', origin);
       callback(new Error('Not allowed by CORS: ' + origin));
     }
   },
@@ -31,8 +34,6 @@ const corsOptions = {
 
 
 app.use(cors(corsOptions));
-
-
 app.options('*', cors(corsOptions));
 
 
@@ -53,6 +54,10 @@ app.use('/api/profile', require('./routes/Profile'));
 app.get("/healthcheck", (req, res) => {
   res.status(200).send("Server is awake and running!");
 });
+
+app.post("/api/test", (req,res) => {
+  res.status(200).json({message: "CORS works!" });
+})
 
 
 app.use((err, req, res, next) => {
