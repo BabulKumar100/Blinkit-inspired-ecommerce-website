@@ -109,7 +109,7 @@ router.post('/forgot-password', async (req, res) => {
       html: `
         <p>You requested a password reset</p>
         <p>Click the link below to reset it:</p>
-        <a href="http://localhost:3000/reset-password?token=${token}">Reset Password</a>
+        <a href="http://blinkit-inspired-ecommerce-website.vercel.app/reset-password?token=${token}">Reset Password">Reset Password</a>
         <p>This link will expire in 1 hour.</p>
       `,
     });
